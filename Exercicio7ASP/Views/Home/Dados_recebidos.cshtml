@@ -1,0 +1,32 @@
+﻿@model Exercicio7ASP.Models.Cliente
+@{
+    ViewData["Title"] = "Dados_recebidos";
+}
+<h1>Dados recebidos</h1>
+<div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input class="form-control" type="text" placeholder="@Model.Nome" readonly>
+</div>
+@if (!string.IsNullOrEmpty(Model.Mensagem))
+{
+    <div class="mb-3">
+        <label class="form-label">Apelido</label>
+        <input class="form-control" type="text" placeholder="@Model.Apelido" readonly>
+    </div>
+}
+@if (!string.IsNullOrEmpty(Model.Mensagem))
+{
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input class="form-control" type="text" placeholder="@Model.Email" readonly>
+    </div>
+}
+@if (!string.IsNullOrEmpty(Model.Mensagem))
+{
+    <div class="mb-3">
+        <label class="form-label">Mensagem</label>
+        <input class="form-control" type="text" placeholder="@Model.Mensagem" readonly>
+    </div>
+}
+@* mostrar os dados recebidos do formulário usando model binding *@
+ @* cntr + K + C -> para comentar uma linha de codigo *@ 

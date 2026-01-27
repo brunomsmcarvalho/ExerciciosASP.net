@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Forms</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Forms com variáveis</h5>
+                        <p class="card-text"></p>
+                            <br />
+                            <br />
+                            <br />
+                        <a asp-action="Form1" class="btn btn-primary">Forms com variáveis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Form Collections</h5>
+                            <p class="card-text"></p>
+                            <br />
+                            <br />
+                            <br />
+                        <a asp-action="Form2" class="btn btn-primary">Form Collections</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Model Binding</h5>
+                        <p class="card-text"></p>
+                            <br />
+                            <br />
+                            <br />
+                        <a asp-action="Form3" class="btn btn-primary">Model Binding</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

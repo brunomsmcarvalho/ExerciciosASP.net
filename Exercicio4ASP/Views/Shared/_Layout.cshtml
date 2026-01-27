@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <header style="background-color:red; padding:50px">
+        <p>Meu Site ASP.NET Core MVC</p>
+
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/Home/Contato">Contato</a> |
+            <a href="/Home/Admin">Admin</a> 
+        </nav>
+        <!-- usar taghelpers, comandos C# em vez de HTML puro, depois serão convertidos-->
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home</a> |
+            <a asp-controller="Home" asp-action="Contato">Contato</a> |
+            <a asp-controller="Home" asp-action="Admin">Admin</a>
+            <a asp-controller="Clientes" asp-action="Index">Clientes</a>
+        </nav>
+
+    </header>
+    <div>
+        <!-- o renderbody vai executar o corpo que está no home index e todas as páginas
+        que utilizam esse layout vao ter o mesmo cabeçalho e rodapé
+        -->
+        @RenderBody() 
+    </div>
+
+    <footer style="background-color:blue; padding:50px">
+        <p>Meu Rodapé ASP.NET Core MVC</p>
+    </footer>
+</body>
+</html>

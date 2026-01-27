@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="Exercicio2ASP/Exercicio2ASP.csproj" />
+  <Project Path="Exercicio3ASP/Exercicio3ASP.csproj" />
+  <Project Path="Exercicio4ASP/Exercicio4ASP.csproj" />
+  <Project Path="Exercicio5ASP/Exercicio5ASP.csproj" />
+  <Project Path="Exercicio5_1ASP/Exercicio5_1ASP.csproj" />
+  <Project Path="Exercicio6/Exercicio6ASP.csproj" Id="240cf192-8688-483d-9055-270ff99fa540" />
+  <Project Path="Exercicio7ASP/Exercicio7ASP.csproj" Id="812d8f51-f13c-4e8f-a439-34fd383972d6" />
+  <Project Path="Exercicio8ASP/Exercicio8ASP.csproj" Id="d119ef79-79ca-4e5f-bafd-b01ecbb448b5" />
+  <Project Path="ExerciciosASP/Exercicio1ASP.csproj" />
+</Solution>

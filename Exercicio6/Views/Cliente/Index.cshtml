@@ -1,0 +1,18 @@
+﻿@* @model Exercicio6ASP.ViewModels.Clientes // usado para ativar o IntelliSense no arquivo cshtml *@
+@model Exercicio6ASP.ViewModels.ClienteAutomovel; 
+@{
+    ViewData["Title"] = "Index";
+}
+
+@* <h1>Clientes</h1> *@
+@* <p>Nome: @Model.Nome</p>
+<p>Apelido: @Model.Apelido</p>
+<p>Telefone: @Model.Telefone</p> *@
+
+
+<h1>Cliente e Automóvel</h1>
+<p>Nome: @Model.Cliente?.Apelido</p>
+<p>Carro: @Model.Automovel?.Marca</p>
+
+<a asp-asp-controller="Clientes" asp-action="Lista" class="btn btn-primary">Lista de Clientes</a>
+

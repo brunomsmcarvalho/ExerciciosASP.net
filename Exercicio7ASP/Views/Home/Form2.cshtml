@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Form_2";
+}
+<h1>Form2</h1>
+<div class="row">
+    @*<form action="/Home/Form2" method="post">*@
+    <form asp-action="Form2" method="post">
+        <div class="col-md-4">
+            <br />
+            <input type="text" class="form-control" name="Nome" placeholder="Nome" required>
+            <br />
+            <input type="text" class="form-control" name="Apelido" placeholder="Apelido" required>
+            <br />
+            <input type="Email" class="form-control" name="Email" placeholder="Correio eletronico" required>
+            <br />
+            <input type="text" class="form-control" name="Mensagem" placeholder="Mensagem">
+            <br />
+            <button class="btn btn-primary" type="submit">Enviar dados</button>
+        </div>
+    </form>
+</div>

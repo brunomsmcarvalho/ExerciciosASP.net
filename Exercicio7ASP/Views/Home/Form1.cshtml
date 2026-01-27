@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Form_1";
+}
+<h1>Form1</h1>
+<div class="row">
+    @*<form action="Form_1" method="post">*@
+    <form asp-action="Form1" method="post">
+        <div class="col-md-4 form-horizontal">
+            <br />
+            <input type="text" class="form-control" name="utilizador" placeholder="Utilizador" required autofocus>
+            <br />
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <br />
+            <button class="btn btn-primary" type="submit">Entrar</button> @*esta linha chama o metodo na linha 7 *@
+            <label class="checkbox pull-right"> 
+                <input type="checkbox" name="lembrar">
+                <label>Lembrar</label>
+            </label>
+        </div>
+    </form>
+</div>
+

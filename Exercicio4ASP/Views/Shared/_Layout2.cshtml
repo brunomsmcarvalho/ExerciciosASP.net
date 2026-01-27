@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <header style="background-color:green; padding:10px">
+        <p>Meu Site ASP.NET Core MVC</p>
+
+        <p>@ViewBag.MessageX</p> <!-- exemplo de uso do ViewBag em um layout -->
+
+    </header>
+    <div>
+        <!-- o renderbody vai executar o corpo que está no home index e todas as páginas
+        que utilizam esse layout vao ter o mesmo cabeçalho e rodapé
+        -->
+        @RenderBody() 
+    </div>
+
+    <footer style="background-color:green; padding:10px">
+        <p>Meu Rodapé ASP.NET Core MVC</p>
+    </footer>
+</body>
+</html>
