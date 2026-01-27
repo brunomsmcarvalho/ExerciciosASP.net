@@ -7,14 +7,14 @@
     <label class="form-label">Nome</label>
     <input class="form-control" type="text" placeholder="@Model.Nome" readonly>
 </div>
-@if (!string.IsNullOrEmpty(Model.Mensagem))
+@if (!string.IsNullOrEmpty(Model.Apelido))
 {
     <div class="mb-3">
         <label class="form-label">Apelido</label>
         <input class="form-control" type="text" placeholder="@Model.Apelido" readonly>
     </div>
 }
-@if (!string.IsNullOrEmpty(Model.Mensagem))
+@if (!string.IsNullOrEmpty(Model.Email))
 {
     <div class="mb-3">
         <label class="form-label">Email</label>
@@ -28,5 +28,6 @@
         <input class="form-control" type="text" placeholder="@Model.Mensagem" readonly>
     </div>
 }
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Voltar para Home</a>
 @* mostrar os dados recebidos do formulário usando model binding *@
  @* cntr + K + C -> para comentar uma linha de codigo *@ 
