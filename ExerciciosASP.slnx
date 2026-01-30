@@ -1,4 +1,7 @@
 <Solution>
+  <Project Path="Exercicio10ASP/Exercicio10ASP.csproj" Id="60d0c2da-7f6e-4b8d-aca3-e0a74ab0cd74" />
+  <Project Path="Exercicio11ASP/Exercicio11ASP.csproj" Id="6277f670-e64d-4cc1-a600-7c90fb160b2f" />
+  <Project Path="Exercicio12ASP/Exercicio12ASP.csproj" Id="fc6c4e25-9509-45d8-ae29-acf566224204" />
   <Project Path="Exercicio2ASP/Exercicio2ASP.csproj" />
   <Project Path="Exercicio3ASP/Exercicio3ASP.csproj" />
   <Project Path="Exercicio4ASP/Exercicio4ASP.csproj" />
