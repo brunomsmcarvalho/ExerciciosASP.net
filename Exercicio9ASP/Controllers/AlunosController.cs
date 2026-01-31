@@ -54,7 +54,7 @@ namespace Exercicio9ASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Idade")] Aluno aluno)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Idade,DataNascimento,Curso")] Aluno aluno)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Exercicio9ASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Idade")] Aluno aluno)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Idade,DataNascimento,Curso")] Aluno aluno)
         {
             if (id != aluno.Id)
             {

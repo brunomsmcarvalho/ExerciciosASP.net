@@ -3,34 +3,36 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h1>Details</h1>
-
 <div>
-    <h4>Aluno</h4>
-    <hr />
+<h1 style="background: linear-gradient(90deg, #0d6efd 20%,#0E08B0 60% , #6610f2 100%); display:inline-block;color: white">Detalhes</h1>
+<br />
+
+<h4 style="background: linear-gradient(90deg, #0d6efd 40%, #6610f2 100%); display:inline-block;color:white">Alunos</h4>
+<hr />
+</div>
+<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 20px;">
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Email)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Idade)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Idade)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" style="color: white; font-weight: bold;">Editar</a> |
+    <a asp-action="Index" style="color: white; font-weight: bold;">Voltar à lista</a>
 </div>

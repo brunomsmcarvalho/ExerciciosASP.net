@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 style="background: linear-gradient(90deg, #0d6efd 20%,#0E08B0 60% , #6610f2 100%); display:inline-block;color: white">Instituição de Ensino</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" style="color: white; font-weight: bold;">Criar novo</a>
 </p>
+<h4 style="background: linear-gradient(90deg, #0d6efd 40%, #6610f2 100%); display:inline-block;color:white">Alunos</h4>
 <table class="table">
     <thead>
         <tr>
@@ -21,7 +22,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Idade)
             </th>
-            <th></th>
+            
+            <th> 
+                @Html.DisplayNameFor(model => model.Curso)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +39,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Curso)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
