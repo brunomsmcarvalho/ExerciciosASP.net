@@ -11,7 +11,11 @@ namespace Exercicio12ASP.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Servicos()
+        {
+            return View();
+        }
+        public IActionResult Portefolio()
         {
             return View();
         }
