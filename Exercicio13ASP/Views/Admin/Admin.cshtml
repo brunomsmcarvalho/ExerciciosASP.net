@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+}
+
+<h1>Admin</h1>
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="text-align:center;">
+            <div class="card-body">
+                <h5 class="card-title"> CRUD Segmentos </h5>
+                <p>
+                    <br/>
+                </p>
+                <a asp-controller="Segmentos" asp-action="Index" class="btn btn-primary"> CRUD Segmentos </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="text-align:center;">
+            <div class="card-body">
+                <h5 class="card-title"> CRUD Destino </h5>
+                <p>
+                    <br/>
+                </p>
+                <a asp-controller="Destinos" asp-action="Index" class="btn btn-primary"> CRUD Destinos </a>
+            </div>
+        </div>
+    </div>
+</div>
+

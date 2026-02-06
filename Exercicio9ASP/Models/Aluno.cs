@@ -18,17 +18,19 @@ namespace Exercicio9ASP.Models
         public string Email { get; set; }
 
         //Idade
+        [Required(ErrorMessage = "O campo idade é obrigatório.")]
         [Display(Name = "Idade", Description = "A idade deve estar entre 15 e 100 anos.")]
-        [Range(15, 100)]
+        [Range(15, 100, ErrorMessage ="A idade deve estar entre 15 e 100 anos.")]
         public int Idade { get; set; }
 
-        // Data de Nascimento
-        [Display(Name = "Data de Nascimento", Description = "Informe a data de nascimento.")]
-        [DataType(DataType.Date)]
-        [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
-        public DateTime DataNascimento { get; set; }
+        //// Data de Nascimento
+        //[Display(Name = "Data de Nascimento", Description = "Informe a data de nascimento.")]
+        //[DataType(DataType.Date)]
+        //[Required(ErrorMessage = "A data de nascimento é obrigatória.")]
+        //public DateTime DataNascimento { get; set; }
 
         // Curso
+        [Required(ErrorMessage = "O campo curso é obrigatório.")]
         [Display(Name = "Curso", Description = "Informe o curso que está matriculado.")]
         [StringLength(100, ErrorMessage = "O campo curso não pode ter mais que 100 caracteres.")]
         public string Curso { get; set; } // Novo parâmetro

@@ -1,0 +1,8 @@
+﻿@model Exercicio13ASP.Models.Apresentacao;
+@{
+    ViewData["Title"] = "Home Page";
+}
+@* renderizar o html que está inserida na tabela apresentacao e chega no homecontroller *@ 
+@Html.Raw(Model.Texto)
+
+
