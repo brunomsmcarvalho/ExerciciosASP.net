@@ -4,44 +4,35 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 style="color:white">Clientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" style="color: white;text-decoration:none;font-size:20px">Criar Novo</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Morada)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Morada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div style="background: rgba(255,255,255,0.8); border-radius: 10px; padding: 20px;">
+    <table class="table" style="background: transparent;">
+        <thead>
+            <tr>
+                <th style="background: transparent;">@Html.DisplayNameFor(model => model.Nome)</th>
+                <th style="background: transparent;">@Html.DisplayNameFor(model => model.Morada)</th>
+                <th style="background: transparent;">@Html.DisplayNameFor(model => model.Email)</th>
+                <th style="background: transparent;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="background: transparent;">@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td style="background: transparent;">@Html.DisplayFor(modelItem => item.Morada)</td>
+                    <td style="background: transparent;">@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td style="background: transparent;">
+                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

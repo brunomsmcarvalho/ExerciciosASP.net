@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Exercicio12ASP.styles.css" asp-append-version="true" />
 </head>
+<style>
+    body {
+        background: url('/imagens/photo.jpg');
+        background-size: cover;
+    }
+</style>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -43,9 +49,15 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer  class="border-top footer text-muted">
+        <style> 
+            .footer{
+            text-align: center;
+            background: white;
+            }
+        </style>
         <div class="container">
-            &copy; 2026 - Exercicio12ASP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2026 - Exercicio12ASP
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

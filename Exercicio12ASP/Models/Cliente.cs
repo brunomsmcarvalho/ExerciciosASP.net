@@ -17,6 +17,7 @@ namespace Exercicio12ASP.Models
         public string? Morada { get; set; }
         // Email
         [Required(ErrorMessage = "O Email é obrigatório.")]
+        [EmailAddress(ErrorMessage = "O Email deve ser válido.")]
         [StringLength(100, MinimumLength = 5, ErrorMessage = " O Email deve ter no mínimo 5 e no máximo 100 caracteres. ")]
         public string? Email { get; set; }
     }

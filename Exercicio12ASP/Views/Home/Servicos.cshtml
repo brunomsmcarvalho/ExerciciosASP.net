@@ -3,13 +3,56 @@
     ViewData["Title"] = "Servicos";
 }
 
-<h1>Servicos</h1>
-<p>Nesta página apresentamos os nossos serviços</p>
-<ul>
-    <li>Serviço 1</li>
-    <li>Serviço 2</li>
-    <li>Serviço 3</li>
-</ul>
+<h1 style="color:white">Servicos</h1>
+<p style="color:white">Nesta página apresentamos os nossos serviços</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo1.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Reparações</p>
+                    <p>Peça um orçamento a um dos nossos técnicos</p>
+                    <a asp-controller="Servicos"
+                       asp-action="Manutencao"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo2.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Desenvolvimento de Software</p>
+                    <p>Desenvolvemos projetos a pensar em si</p>
+                    <a asp-controller="Servicos"
+                       asp-action="Desenvolvimento"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo3.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Ciber Segurança</p>
+                    <p>Garantimos a sua segurança</p>
+                    <a asp-controller="Servicos"
+                       asp-action="Seguranca"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
