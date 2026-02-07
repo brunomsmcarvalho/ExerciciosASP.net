@@ -14,6 +14,7 @@ namespace Exercicio12ASP.Models
         public string? Nome { get; set; }
         // Morada
         [Display(Name = "Morada Cliente", Description = "Morada do Cliente.")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "A morada deve ter mais de 3 caracteres e menos de 100")]
         public string? Morada { get; set; }
         // Email
         [Required(ErrorMessage = "O Email é obrigatório.")]

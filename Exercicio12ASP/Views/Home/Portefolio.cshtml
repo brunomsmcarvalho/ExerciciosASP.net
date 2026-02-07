@@ -3,11 +3,54 @@
     ViewData["Title"] = "Portefolio";
 }
 
-<h1>Portefolio</h1>
-<p>Nesta página apresentamos os nossos projetos</p>
-<ul>
-    <li>Projeto 1</li>
-    <li>Projeto 2</li>
-    <li>Projeto 3</li>
-</ul>
+<h1 style="color:white">Portefolios</h1>
+<p style="color:white">Nesta página apresentamos os nossos Projetos</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo1.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Projeto1</p>
+                    <p>Peça um orçamento a um dos nossos técnicos</p>
+                    <a asp-controller="Portefolio"
+                       asp-action="Projeto1"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo2.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Projeto2</p>
+                    <p>Desenvolvemos projetos a pensar em si</p>
+                    <a asp-controller="Portefolio"
+                       asp-action="Projeto2"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+            <div class="card h-100">
+                <img src="~/imagens/photo3.jpg" class="card-img-top" />
+                <div class="card-body d-flex flex-column">
+                    <p style="font-size:20px; font-weight:bold;" class="card-text">Projeto3</p>
+                    <p>Garantimos a sua segurança</p>
+                    <a asp-controller="Portefolio"
+                       asp-action="Projeto3"
+                       class="btn btn-primary mt-auto">
+                        Mais info...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
