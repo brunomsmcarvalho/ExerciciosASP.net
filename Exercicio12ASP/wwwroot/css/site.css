@@ -33,4 +33,30 @@ body {
 .card-img-top {
     height: 300px; /* escolhe a altura que quiseres */
     object-fit: cover; /* corta a imagem sem distorcer */
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    }
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L4.78.72 1.53 4l3.25 3.28L5.5 8 1 4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0L3.22.72 6.47 4 3.22 7.28 2.5 8 7 4z'/%3E%3C/svg%3E");
+}
+
+.carrocel-branco .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L4.78.72 1.53 4l3.25 3.28L5.5 8 1 4z'/%3E%3C/svg%3E");
+}
+
+.carrocel-branco .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0L3.22.72 6.47 4 3.22 7.28 2.5 8 7 4z'/%3E%3C/svg%3E");
+}
+
+
+#carouselExampleIndicators .carousel-item img {
+    height: 720px;
+    /*object-fit: cover;*/
+    /*object-position: center;*/
+    background-color: black; /* opcional */
 }

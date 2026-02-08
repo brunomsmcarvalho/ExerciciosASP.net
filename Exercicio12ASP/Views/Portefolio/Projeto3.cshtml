@@ -1,7 +1,31 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Projeto3";
 }
 
-<h1>Projeto3</h1>
+<h1 style="color:white">Gestão de frota</h1>
 
+<div id="carouselExampleIndicators" class="carousel slide carrocel-branco">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="@Url.Content("~/imagens/4.png")" class="d-block w-100" alt="Imagem 1" />
+        </div>
+        <div class="carousel-item">
+            <img src="@Url.Content("~/imagens/5.png")" class="d-block w-100" alt="Imagem 2" />
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<a style="background-color:white; color:black" href="javascript:history.back()" class="btn btn-primary">
+    ← Voltar à Página Anterior
+</a>
