@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PortalFerias.Models.Destino_BC>
+
+@{
+    ViewData["Title"] = "Destinos";
+}
+<br />
+<br />
+
+<h2>Destinos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>País</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Pais)</td>
+                <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                <td class="text-nowrap fw-bold">
+                    @item.Preco.ToString("N2") &nbsp;€
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

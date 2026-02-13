@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Login Admin";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="text-center mb-4">
+            <img src="~/images/login.png" alt="Admin Login" style="width: 200px;" />
+        </div>
+
+        <form asp-action="Index" method="post">
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <div class="form-group mb-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="password">Código</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Código" required />
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>

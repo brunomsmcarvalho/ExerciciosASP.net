@@ -1,0 +1,17 @@
+﻿@model PortalFerias.Models.Apresentacao_BC
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+@if (Model != null && !string.IsNullOrEmpty(Model.Texto))
+{
+    @Html.Raw(Model.Texto)
+}
+else
+{
+    <h1>Bem vindo!</h1>
+    <p>Esta é uma página onde pode pesquisar o local ideal para passar as suas férias.</p>
+    <p>Obrigado pela preferência.</p>
+}
+
