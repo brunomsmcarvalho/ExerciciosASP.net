@@ -24,7 +24,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page1">Page 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page2">Page 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page3">Page 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="about">About</a>
                         </li>
                     </ul>
                 </div>
@@ -37,9 +46,24 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Exercicio14ASP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer footer-custom py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div style="max-width: 80%; line-height: 1.1;">
+                <span style="font-size: 0.7rem; font-weight: bold; display: block;">
+                    &copy; 2026 CENCAL - miniCMS
+                </span>
+                <span style="font-size: 0.5rem; display: block; text-align: justify;">
+                    Todos os direitos reservados. O conteúdo deste portal, incluindo o motor de gestão de conteúdos e bases de dados associadas, é protegido por lei. <br />
+                    A utilização não autorizada pode resultar em sanções civis e criminais. Processado em conformidade com as normas de segurança digital e proteção de dados em vigor.
+                </span>
+            </div>
+
+            <div class="calendar-card" style="transform: scale(0.8); margin: 0;">
+                <div class="month">@DateTime.Now.ToString("MMM").Replace(".", "").ToUpper()</div>
+                <div class="day">@DateTime.Now.Day</div>
+            </div>
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

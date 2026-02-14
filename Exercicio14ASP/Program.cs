@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // BD
 builder.Services.AddDbContext<DbMiniCMSContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString(" miniBdCMSConnection ")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("miniBdCMSConnection")));
 
 var app = builder.Build();
 
@@ -24,6 +24,8 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<DbMiniCMSContext>();
     context.Database.EnsureCreated();
+
+    DbInitializer.Initialize(context);
 }
 
 app.UseRouting();
