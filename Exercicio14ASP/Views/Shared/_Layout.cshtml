@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Exercicio14ASP.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3"
+             style="background-color: rgba(173, 216, 230, 0.6); backdrop-filter: blur(5px);">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Exercicio14ASP</a>
+                <a class="navbar-brand" style="color:darkblue" asp-area="" asp-controller="Home" asp-action="Index">Exercicio14ASP</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,20 +23,23 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" style="color:darkblue" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page1">Page 1</a>
+                            <a class="nav-link" style="color:deepskyblue" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page1">Page 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page2">Page 2</a>
+                            <a class="nav-link" style="color:darkblue" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page2">Page 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page3">Page 3</a>
+                            <a class="nav-link" style="color:deepskyblue" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="page3">Page 3</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="about">About</a>
+                            <a class="nav-link" style="color:darkblue" asp-area="" asp-controller="Cms" asp-action="Page" asp-route-id="about">About</a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-primary fw-bold" asp-controller="Admin" asp-action="Index"><i class="bi bi-shield-lock"></i> Admin</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,63 @@
+﻿@model Exercicio14ASP.Models.Conteudo
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_LayoutAdmin";
+}
+<link href="~/richtexteditor/rte_theme_default.css" rel="stylesheet" />
+<script src="~/richtexteditor/rte.js"></script>
+<script src="~/richtexteditor/plugins/all_plugins.js"></script>
+
+<h1>Edit</h1>
+
+<h4>Conteudo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Pagina" class="control-label"></label>
+                <input asp-for="Pagina" class="form-control" />
+                <span asp-validation-for="Pagina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Texto" class="control-label"></label>
+                @*<input asp - for="Texto" class="form - control" /> *@
+                <textarea id="div_editor" asp-for="Texto" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Texto" class="text-danger"></span>
+            </div>
+            <script>
+                var editor1 = new RichTextEditor(document.getElementById("div_editor"));
+            </script>
+
+            <div class="form-group">
+                <label asp-for="Autor" class="control-label"></label>
+                <input asp-for="Autor" class="form-control" />
+                <span asp-validation-for="Autor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Admin">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

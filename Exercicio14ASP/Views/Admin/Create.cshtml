@@ -1,0 +1,72 @@
+﻿@model Exercicio14ASP.Models.Conteudo
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_LayoutAdmin";
+}
+
+<link href="/richtexteditor/rte_theme_default.css" rel="stylesheet" />
+<script src="/richtexteditor/rte.js"></script>
+<script src="/richtexteditor/plugins/all_plugins.js"></script>
+
+
+<h1>Nova página</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Pagina" class="control-label"></label>
+                <input asp-for="Pagina" class="form-control" />
+                <span asp-validation-for="Pagina" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Texto" class="control-label"></label>
+                <textarea id="div_editor" asp-for="Texto" class="form-control"></textarea>
+                <span asp-validation-for="Texto" class="text-danger"></span>
+            </div>
+            <script>
+                var editor1 = new RichTextEditor(document.getElementById("div_editor"));
+            </script>
+
+            <div class="form-group mb-3">
+                <label asp-for="Autor" class="control-label"></label>
+                <input asp-for="Autor" class="form-control" />
+                <span asp-validation-for="Autor" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Criar Conteúdo" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Admin" class="btn btn-secondary">Voltar à Lista</a>
+</div>
+
+@section Scripts {
+    <script src="~/richtexteditor/rte.js"></script>
+    <script src="~/richtexteditor/plugins/all_plugins.js"></script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,8 +1,6 @@
-﻿@{
+﻿@model Exercicio14ASP.Models.Conteudo
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    
-</div>
+@Html.Raw(Model.Titulo)
+@Html.Raw(@Model.Texto)

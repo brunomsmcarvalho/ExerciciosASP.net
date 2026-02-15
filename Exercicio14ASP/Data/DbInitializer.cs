@@ -18,7 +18,7 @@ namespace Exercicio14ASP.Data
                 Titulo = "<h1>Home</h1>",
                 Texto = "<p>Bem vindo ao <b>Sistema miniCMS</b></p>" +
             "<p>Todo o conteudo do site está numa <b>base de dados</b></p>" +
-            "<img src = '/cms/media/minicms.jpg' /> ",
+            "<img src = '/media/minicms.jpg' /> ",
                 Autor = "miniCMS",
                 Data = DateTime.Now
             };
