@@ -5,45 +5,54 @@
     Layout = "_LayoutAdmin";
 }
 
-<h1>Details</h1>
+<h1>Detalhes da Página</h1>
 
 <div>
     <h4>Conteudo</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Pagina)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Pagina)
         </dd>
-        <dt class = "col-sm-2">
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Titulo)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Titulo)
+        <dd class="col-sm-10">
+            <div class="content-display">
+                @Html.Raw(Model.Titulo)
+            </div>
         </dd>
-        <dt class = "col-sm-2">
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Texto)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Texto)
+        <dd class="col-sm-10">
+            <div class="content-display">
+                @Html.Raw(Model.Texto)
+            </div>
         </dd>
-        <dt class = "col-sm-2">
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Autor)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Autor)
         </dd>
-        <dt class = "col-sm-2">
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Data)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Data)
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Admin">Back to List</a>
+
+<div class="admin-form-actions">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Admin" class="btn btn-secondary">Back to List</a>
 </div>

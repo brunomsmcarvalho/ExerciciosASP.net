@@ -1,63 +1,89 @@
 ﻿@model Exercicio14ASP.Models.Conteudo
-
 @{
     ViewData["Title"] = "Edit";
     Layout = "_LayoutAdmin";
 }
+
 <link href="~/richtexteditor/rte_theme_default.css" rel="stylesheet" />
 <script src="~/richtexteditor/rte.js"></script>
 <script src="~/richtexteditor/plugins/all_plugins.js"></script>
 
-<h1>Edit</h1>
-
-<h4>Conteudo</h4>
+<h1>Editar página</h1>
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+    <div class="col-md-12">
+        <form asp-action="Edit" method="post" id="formEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+
             <div class="form-group">
                 <label asp-for="Pagina" class="control-label"></label>
                 <input asp-for="Pagina" class="form-control" />
                 <span asp-validation-for="Pagina" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Titulo" class="control-label"></label>
                 <input asp-for="Titulo" class="form-control" />
                 <span asp-validation-for="Titulo" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Texto" class="control-label"></label>
-                @*<input asp - for="Texto" class="form - control" /> *@
-                <textarea id="div_editor" asp-for="Texto" class="form-control" rows="5"></textarea>
+                <div id="div_editor_wrapper"></div>
+                <textarea asp-for="Texto" id="textoHidden" style="display:none;"></textarea>
                 <span asp-validation-for="Texto" class="text-danger"></span>
             </div>
-            <script>
-                var editor1 = new RichTextEditor(document.getElementById("div_editor"));
-            </script>
 
             <div class="form-group">
                 <label asp-for="Autor" class="control-label"></label>
                 <input asp-for="Autor" class="form-control" />
                 <span asp-validation-for="Autor" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Data" class="control-label"></label>
                 <input asp-for="Data" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-action="Admin" class="btn btn-secondary">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Admin">Back to List</a>
-</div>
+<script>
+    var editor1 = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var config = {
+            height: '350px'
+        };
+
+        editor1 = new RichTextEditor("#div_editor_wrapper", config);
+
+        // Carregar o conteúdo existente
+        var conteudoExistente = document.getElementById('textoHidden').value;
+        if (conteudoExistente) {
+            editor1.setHTMLCode(conteudoExistente);
+        }
+
+        // No submit, copiar de volta
+        document.getElementById('formEdit').addEventListener('submit', function(e) {
+            var htmlContent = editor1.getHTMLCode();
+            console.log('Conteúdo do editor:', htmlContent);
+            document.getElementById('textoHidden').value = htmlContent;
+        });
+    });
+</script>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
